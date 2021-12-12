@@ -4,7 +4,7 @@ type Props = {
   text: string;
 };
 
-const Button = function ({ text }: Props) {
+const Button = ({ text }: Props) => {
   return <button type="button">{text}</button>;
 };
 
