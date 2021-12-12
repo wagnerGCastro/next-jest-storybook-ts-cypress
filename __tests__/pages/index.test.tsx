@@ -1,12 +1,12 @@
-import React from "react";
-import { mount } from "enzyme";
-import Home from "@/pages/index";
+import React from 'react';
+import { mount } from 'enzyme';
+import Home from '@/pages/index';
 
-describe("Pages", () => {
-  describe("Home", () => {
-    it("should render without throwing an error", function () {
+describe('Pages', () => {
+  describe('Home', () => {
+    it('should render without throwing an error', () => {
       const wrap = mount(<Home />);
-      expect(wrap.find("h1").text()).toBe("Welcome to My Next App!");
+      expect(wrap.find('h1').text()).toBe('Welcome to My Next App!');
     });
   });
 });

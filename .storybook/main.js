@@ -1,7 +1,7 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
-  stories: ["../__tests__/components/**/*.stories.tsx"],
+  stories: ['../__tests__/components/**/*.stories.tsx'],
   // Add nextjs preset
-  presets: [path.resolve(__dirname, "./next-preset.js")],
+  presets: [path.resolve(__dirname, './next-preset.js')],
 };
