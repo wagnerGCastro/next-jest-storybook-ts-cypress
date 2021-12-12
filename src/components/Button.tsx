@@ -1,7 +1,11 @@
-import React from "react";
+import React from 'react';
 
 type Props = {
   text: string;
 };
 
-export default ({ text }: Props) => <button>{text}</button>;
+const Button = function ({ text }: Props) {
+  return <button type="button">{text}</button>;
+};
+
+export default Button;
