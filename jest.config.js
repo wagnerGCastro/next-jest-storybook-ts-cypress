@@ -1,13 +1,13 @@
 module.exports = {
   collectCoverageFrom: [
-    "**/*.{ts,tsx}",
-    "!**/node_modules/**",
-    "!**/.storybook/**",
-    "!**/tests/**",
-    "!**/coverage/**",
-    "!jest.config.js",
+    '**/*.{ts,tsx}',
+    '!**/node_modules/**',
+    '!**/.storybook/**',
+    '!**/tests/**',
+    '!**/coverage/**',
+    '!jest.config.js',
   ],
-  testMatch: ["<rootDir>/__tests__/**/*.{spec,test}.{js,jsx,ts,tsx}"],
+  testMatch: ['<rootDir>/__tests__/**/*.{spec,test}.{js,jsx,ts,tsx}'],
   coverageThreshold: {
     global: {
       branches: 100,
@@ -16,28 +16,21 @@ module.exports = {
       statements: 100,
     },
   },
-  setupFiles: ["<rootDir>/config/setup.js"],
-  preset: "ts-jest",
-  testPathIgnorePatterns: [
-    "/.next/",
-    "/node_modules/",
-    "/lib/",
-    "/tests/",
-    "/coverage/",
-    "/.storybook/",
-  ],
+  setupFiles: ['<rootDir>/config/setup.js'],
+  preset: 'ts-jest',
+  testPathIgnorePatterns: ['/.next/', '/node_modules/', '/lib/', '/tests/', '/coverage/', '/.storybook/'],
   // testRegex: "(<rootDir>/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-  testURL: "http://localhost",
-  testEnvironment: "jsdom",
-  moduleFileExtensions: ["ts", "tsx", "js", "json"],
+  testURL: 'http://localhost',
+  testEnvironment: 'jsdom',
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
   moduleNameMapper: {
-    "^@/(.*)": "<rootDir>/src/$1",
-    "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
-    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-      "<rootDir>/__mocks__/fileMock.js",
+    '^@/(.*)': '<rootDir>/src/$1',
+    '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.js',
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/__mocks__/fileMock.js',
   },
   transform: {
-    ".(ts|tsx)": "babel-jest",
+    '.(ts|tsx)': 'babel-jest',
   },
-  transformIgnorePatterns: ["<rootDir>/node_modules/"],
+  transformIgnorePatterns: ['<rootDir>/node_modules/'],
 };
