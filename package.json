@@ -6,14 +6,27 @@
     "dev": "next dev -p 3008",
     "build": "next build",
     "start": "next start",
-    "lint:all": "eslint ./src --max-warnings=0",
+    "lint-all": "eslint ./src --max-warnings=0",
     "lint:watch": "esw ./src --max-warnings=0 --quiet --watch",
     "lint": "eslint ./src/components/** ./src/pages/** -c .eslintrc.json --ext js,jsx,ts,tsx",
     "lint-fix": "eslint ./src/components/** ./src/pages/** --fix --ext js,jsx,ts,tsx",
+    "prettier-format": "prettier --write './src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "storybook": "start-storybook -p 6006 -c .storybook",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "postinstall": "husky install",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint-all --fix"
+    ]
   },
   "dependencies": {
     "next": "9.5.4",
