@@ -81,6 +81,7 @@
      "namedComponents": "arrow-function",
       "unnamedComponents": "arrow-function"
     }],
-    "import/no-named-as-default": 0
+    "import/no-named-as-default": 0,
+    "react/jsx-props-no-spreading": "off"
   }
 }
