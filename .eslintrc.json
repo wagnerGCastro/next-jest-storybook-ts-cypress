@@ -3,7 +3,8 @@
     "browser": true,
     "es2020": true,
     "node": true,
-    "jest": true
+    "jest": true,
+    "cy": true
   },
   "settings": {
     "react": {
