@@ -16,6 +16,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "cy:open": "cypress open",
+    "cy:run": "cypress run",
     "postinstall": "husky install",
     "prepare": "husky install"
   },
