@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v1
@@ -18,11 +20,14 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Linting
+      - name: Check Lintings
         run: yarn lint
 
-      - name: Test
-        run: yarn test
+      - name: Check Tests
+        run: yarn test:ci
+
+      - name: Check commit message
+        uses: wagoid/commitlint-github-action@v4
 
       - name: Build
         run: yarn build
