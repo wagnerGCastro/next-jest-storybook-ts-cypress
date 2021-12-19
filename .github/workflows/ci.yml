@@ -37,5 +37,5 @@ jobs:
       - name: Check commit message
         uses: wagoid/commitlint-github-action@v4
 
-      - name: Build
+      - name: Build Project
         run: yarn build
