@@ -12,7 +12,7 @@
     "lint-fix": "eslint ./src/components/** ./src/pages/** --fix --ext js,jsx,ts,tsx",
     "prettier-format": "prettier --write '*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "storybook": "start-storybook -p 6006 -c .storybook",
-    "test": "jest --maxWorkers=50%",
+    "test": "jest --maxWorkers=50% --cache",
     "test:watch": "jest --watch=25%",
     "test:ci": "jest --watchAll=false --runInBand",
     "test:coverage": "jest --coverage",
@@ -32,8 +32,7 @@
     "*.{js,jsx,ts,tsx}": [
       "yarn prettier-format",
       "yarn lint-all --fix",
-      "cross-env CI=true yarn test --findRelatedTests --bail",
-      "gitt add"
+      "cross-env CI=true yarn test --findRelatedTests --bail"
     ]
   },
   "dependencies": {
