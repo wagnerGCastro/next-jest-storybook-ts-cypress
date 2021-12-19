@@ -56,29 +56,25 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": [
-    "react",
-    "react-hooks",
-    "@typescript-eslint",
-    "import",
-    "jest",
-    "prettier",
-    "jsx-a11y"
-  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "import", "jest", "prettier", "jsx-a11y"],
   "rules": {
     "prettier/prettier": "error",
-   
+
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "func-names": ["error", "as-needed", { "generators": "never" }],
-    "react/function-component-definition": [2, {
-     "namedComponents": "arrow-function",
-      "unnamedComponents": "arrow-function"
-    }],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
     "import/no-named-as-default": 0,
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "import/no-named-as-default-member": 0
   }
 }
