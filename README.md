@@ -49,3 +49,19 @@ yarn test
 - [Medium](https://medium.com/@wagnerGCastro)
 - [DEV.to](https://dev.to/@wagnerGCastro)
 - [LinkedIn](https://www.linkedin.com/in/@wagnerGCastro)
+
+## Comands
+  # How do I test a single file using Jest
+    $ npm test -- __tests__/units/calculator.test.ts
+    $ jest --maxWorkers=50% --cache -- "__tests__/units/calculator.test.ts"
+
+    -- jest wath
+    $ yarn test:watch -- __tests__/units/calculator.test.ts
+    $ jest --watch=25% __tests__/units/calculator.test.ts
+    $ npx jest --watch __tests__/units/calculator.test.ts
+    $ npx jest --watchAll __tests__/units/calculator.test.ts
+
+  # Git commit skip test
+    $ git commit --no-verify -m "commit message"
+    $ git commit --no-verify --amend
+    $ git commit --no-verify --amend -m "#20 jest(unit) - Testing sum of calculator function"
